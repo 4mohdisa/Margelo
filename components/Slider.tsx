@@ -6,6 +6,7 @@ interface Props {
   initialOffsetX: number;
   className: string;
   contentWidth: number;
+  children: React.ReactNode;
 }
 
 const SliderContainer: React.FC<Props> = ({
@@ -53,6 +54,7 @@ const SliderContainer: React.FC<Props> = ({
 
 interface ItemProps {
   width: number;
+  children: React.ReactNode;
 }
 
 export const SliderItem: React.FC<ItemProps> = ({ children, width }) => {
