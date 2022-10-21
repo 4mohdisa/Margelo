@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
       <Image src="/assets/logo.svg" height={18} width={18} />
       <a href="/imprint">Imprint</a>
       <a href="/privacy">Privacy Policy</a>
-      <a href="https://github.com/margelo" target="_blank">
+      <a href="https://github.com/margelo" target="_blank" rel="noreferrer">
         GitHub
       </a>
-      <a href="https://twitter.com/margelo_io" target="_blank">
+      <a href="https://twitter.com/margelo_io" target="_blank" rel="noreferrer">
         Twitter
       </a>
     </footer>
