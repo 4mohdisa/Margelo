@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import AboutUs from "../components/Aboutus";
+import ContactUs from "../components/contactus";
+import Footer from "../components/Footer";
 import Masthead from "../components/masthead";
 import Skills from "../components/Skills";
 import TrustedBy from "../components/Trustedby";
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
       <Skills />
       <Works />
       <TrustedBy />
+      <ContactUs />
+      <Footer />
     </div>
   );
 };
