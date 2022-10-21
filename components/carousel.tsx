@@ -13,6 +13,7 @@ interface ContextValue {
 interface Props {
   className?: string;
   children: ReactNode;
+  selectedIndex: number;
 }
 
 export const CarouselContext = React.createContext<ContextValue>({

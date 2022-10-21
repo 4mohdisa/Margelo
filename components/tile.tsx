@@ -3,6 +3,7 @@ import { ScrollContext } from "../utils/scroll-oberver";
 
 interface WrapperProps {
   numOfPages: number;
+  children: React.ReactNode;
 }
 interface TileContextValue {
   numOfPages: number;
@@ -51,12 +52,15 @@ export const TileWrapper: React.FC<WrapperProps> = ({
     </TileContext.Provider>
   );
 };
+interface Props {
+  children: React.ReactNode;
+}
 
-export const TileBackground: React.FC = ({ children }) => (
+export const TileBackground: React.FC<Props> = ({ children }) => (
   <div className="absolute h-full w-full">{children}</div>
 );
 
-export const TileContent: React.FC = ({ children }) => (
+export const TileContent: React.FC<Props> = ({ children }) => (
   <div className="sticky top-0 h-screen overflow-hidden">{children}</div>
 );
 

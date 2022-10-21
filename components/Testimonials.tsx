@@ -3,9 +3,12 @@ import Carousel, { CarouselContext } from "./carousel";
 import CarouselItem from "./carousel-item";
 import Review from "./review";
 
-type Props = {};
+type Props = {
+  children: string;
+  by: string;
+};
 
-const Testimonials: React.FC = () => {
+const Testimonials: React.FC = (children, by) => {
   return (
     <Carousel className="bg-black text-white py-10 lg:py-20">
       <CarouselItem index={0}>

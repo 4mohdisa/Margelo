@@ -1,12 +1,12 @@
 import React from "react";
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 
-export const WorkContainer: React.FC = ({ children }) => {
-  <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
-    {children}
-  </div>;
-  console.log(children);
-};
+// export const WorkContainer: React.FC = ({ children }) => {
+//   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
+//     {children}
+//   </div>;
+//   console.log(children);
+// };
 
 export const WorkBackground: React.FC = () => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen sticky top-0">
@@ -15,10 +15,10 @@ export const WorkBackground: React.FC = () => (
   </div>
 );
 
-export const WorkLeft: React.FC<{ progress: number }> = ({
-  children,
-  progress,
-}) => {
+export const WorkLeft: React.FC<{
+  progress: number;
+  children: React.ReactNode;
+}> = ({ children, progress }) => {
   let translateY = Math.max(0, 50 - progress * 3 * 50);
   if (progress > 0.85) translateY = Math.max(-50, -(progress - 0.85) * 2 * 50);
   return (
@@ -33,10 +33,10 @@ export const WorkLeft: React.FC<{ progress: number }> = ({
   );
 };
 
-export const WorkRight: React.FC<{ progress: number }> = ({
-  children,
-  progress,
-}) => {
+export const WorkRight: React.FC<{
+  progress: number;
+  children: React.ReactNode;
+}> = ({ children, progress }) => {
   let translateY = Math.max(-50, -(progress - 0.5) * 50);
   return (
     <div
@@ -54,6 +54,7 @@ export const WorkRight: React.FC<{ progress: number }> = ({
 
 interface LinkProps {
   href: string;
+  children: React.ReactNode;
 }
 
 export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (

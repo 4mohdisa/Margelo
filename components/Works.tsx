@@ -3,7 +3,7 @@ import React from "react";
 import { Tile, TileBackground, TileContent, TileWrapper } from "./tile";
 import {
   WorkBackground,
-  WorkContainer,
+  // WorkContainer,
   WorkLeft,
   WorkLink,
   WorkRight,
