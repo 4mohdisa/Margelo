@@ -52,15 +52,15 @@ export const TileWrapper: React.FC<WrapperProps> = ({
     </TileContext.Provider>
   );
 };
-interface Props {
+type Child = {
   children: React.ReactNode;
-}
+};
 
-export const TileBackground: React.FC<Props> = ({ children }) => (
+export const TileBackground: React.FC<Child> = ({ children }) => (
   <div className="absolute h-full w-full">{children}</div>
 );
 
-export const TileContent: React.FC<Props> = ({ children }) => (
+export const TileContent: React.FC<Child> = ({ children }) => (
   <div className="sticky top-0 h-screen overflow-hidden">{children}</div>
 );
 

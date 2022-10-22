@@ -3,7 +3,7 @@ import Head from "next/head";
 import AboutUs from "../components/Aboutus";
 import ContactUs from "../components/contactus";
 import Footer from "../components/Footer";
-import Masthead from "../components/masthead";
+import Masthead from "../components/Masthead";
 import Skills from "../components/Skills";
 import TrustedBy from "../components/Trustedby";
 import Works from "../components/Works";

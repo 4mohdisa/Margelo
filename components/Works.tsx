@@ -13,6 +13,9 @@ type Props = {};
 
 const Works = () => (
   <TileWrapper numOfPages={4}>
+    <div className="absolute h-full w-full">
+      <WorkBackground />
+    </div>
     <TileBackground>
       <WorkBackground />
     </TileBackground>
