@@ -1,14 +1,18 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { ReactNode, useCallback, useEffect, useState } from "react";
 
 interface ScrollValue {
   innerWidth: number;
 }
 
+type Props = {
+  children: ReactNode;
+};
+
 export const SizeContext = React.createContext<ScrollValue>({
   innerWidth: 0,
 });
 
-const SizeObserver: React.FC = ({ children }) => {
+const SizeObserver: React.FC<Props> = ({ children }) => {
   const [innerWidth, setInnerWidth] = useState(0);
   const handleResize = useCallback(() => {
     setInnerWidth(window.innerWidth);
