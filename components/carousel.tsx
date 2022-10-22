@@ -22,7 +22,7 @@ export const CarouselContext = React.createContext<ContextValue>({
 });
 
 const Carousel: React.FC<Props> = ({ children, className }) => {
-  const [selectedIndex, setSelectedIndex] = useState();
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const [viewportRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
